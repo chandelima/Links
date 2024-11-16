@@ -1,0 +1,10 @@
+[
+  {
+    "route": "mxm/demandas/fw_porcomponente",
+    "redirect": "https://w66kbf2s.nocodb.com/#/nc/view/3cfd74c3-8d9e-4a8b-8eb8-9280563d7116"
+  },
+  {
+    "route": "mxm/demandas/fw_kanban",
+    "redirect": "https://w66kbf2s.nocodb.com/#/nc/kanban/1717be2e-16c0-4e1e-9919-68232d628792"
+  }
+]

@@ -1,5 +1,9 @@
 [
   {
+    "route": "google",
+    "redirect": "https://www.google.com.br"
+  },
+  {
     "route": "mxm/demandas/fw_porcomponente",
     "redirect": "https://w66kbf2s.nocodb.com/#/nc/view/3cfd74c3-8d9e-4a8b-8eb8-9280563d7116"
   },

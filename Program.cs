@@ -1,4 +1,5 @@
 using Links.Services;
+using Pages.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.Configure<List<RedirectItem>>(builder.Configuration.GetSection("Links"));
 builder.Services.AddScoped(typeof(GetLinkService));
 
 var app = builder.Build();

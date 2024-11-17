@@ -24,4 +24,12 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Tungsten\source\repos\Pages\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Tungsten\source\repos\Pages\.editorconfig" />
+  </ItemGroup>
+
 </Project>

@@ -2,7 +2,7 @@ using Links.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Web;
 
-namespace Pages.Controllers
+namespace Links.Controllers
 {
     [ApiController]
     public class LinksController : ControllerBase
@@ -15,12 +15,12 @@ namespace Pages.Controllers
         }
 
         [HttpGet("{*route}")]
-        public IActionResult Get(string? route)
+        public async Task<IActionResult> Get(string? route)
         {
             string? url = null;
-            
+
             var decodedRoute = HttpUtility.UrlDecode(route) ?? string.Empty;
-            url = _getLinkService.Get(decodedRoute);
+            url = await _getLinkService.Get(decodedRoute);
 
             return !string.IsNullOrWhiteSpace(url)
                 ? Redirect(url)

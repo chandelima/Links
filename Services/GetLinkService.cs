@@ -1,20 +1,19 @@
-﻿using Microsoft.Extensions.Options;
-using Pages.Models;
+﻿using Links.Repositories;
 
 namespace Links.Services;
 
 public class GetLinkService
 {
-    private readonly List<RedirectItem> _links;
+    private readonly RedirectItemRepository _repository;
 
-    public GetLinkService(IOptions<List<RedirectItem>> links)
+    public GetLinkService(RedirectItemRepository repository)
     {
-        _links = links?.Value ?? [];
+        _repository = repository;
     }
 
-    public string? Get(string route)
+    public async Task<string?> Get(string route)
     {
-        var registry = _links.FirstOrDefault(x => x.Route == route);
+        var registry = await _repository.GetByRoute(route);
 
         return registry?.Redirect is not null
             ? registry.Redirect

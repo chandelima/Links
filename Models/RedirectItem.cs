@@ -1,4 +1,4 @@
-﻿namespace Pages.Models
+﻿namespace Links.Models
 {
     public class RedirectItem
     {

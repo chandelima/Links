@@ -15,16 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Static\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="Static\pages.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <EditorConfigFiles Remove="C:\Users\Tungsten\source\repos\Pages\.editorconfig" />
   </ItemGroup>
 

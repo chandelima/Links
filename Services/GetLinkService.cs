@@ -5,19 +5,12 @@ namespace Links.Services;
 
 public class GetLinkService
 {
-    private const string DIRETORIO_JSONS = "Static";
+    private const string DIRETORIO_JSONS = "/app/";
     private const string ARQUIVO_JSON = "pages.json";
-    
-    private readonly IWebHostEnvironment _env;
-
-    public GetLinkService(IWebHostEnvironment env)
-    {
-        _env = env;
-    }
 
     private IEnumerable<RedirectItem> LoadJson()
     {
-        var path = Path.Combine(_env.ContentRootPath, DIRETORIO_JSONS, ARQUIVO_JSON);
+        var path = Path.Combine(DIRETORIO_JSONS, ARQUIVO_JSON);
 
         if (!File.Exists(path))
         {
